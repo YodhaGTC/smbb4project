@@ -4,4 +4,8 @@ public class ApexClassOne {
         ApexClassTwo obj = new ApexClassTwo();
         obj.display();
     }
+
+    public static something(){
+        system.debug('TEST');
+    }
 }
