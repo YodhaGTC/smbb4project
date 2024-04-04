@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+    
+    <lightning:recordViewForm objectApiName="contact" recordId="{!v.recordId}">
+        <lightning:outputField fieldName="FirstName" />
+        <lightning:outputField fieldName="LastName" />
+        <lightning:outputField fieldName="Phone" />
+        <lightning:outputField fieldName="Email" />
+        <lightning:outputField fieldName="Birthdate" />
+    </lightning:recordViewForm>
+	
+</aura:component>

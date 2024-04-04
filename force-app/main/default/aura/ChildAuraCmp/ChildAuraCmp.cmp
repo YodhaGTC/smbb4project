@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="childparamreceiver" type="string"/>
+    <aura:attribute name="childparamreceiverOne" type="string"/>
+    <aura:attribute name="childparamreceiverTwo" type="string"/>
+    
+    <aura:method name="childMsgMethod" action="{!c.getMessageAction}" access="public">
+    	<aura:attribute name="paramOne" type="string"/>
+        <aura:attribute name="paramTwo" type="string"/>
+    </aura:method>
+    
+    
+	<div>
+        <b>This is an Child AURA cmp</b> <br/>
+        <p>The msg received from parent cmp: {!v.childparamreceiver}</p>
+    </div>
+    <div>
+        <b>This is an Child AURA cmp dealing with aura method communications</b> <br/>
+        <p>ParamOne from parent cmp: {!v.childparamreceiverOne}</p>
+        <p>ParamTwo from parent cmp: {!v.childparamreceiverTwo}</p>
+    </div>
+</aura:component>

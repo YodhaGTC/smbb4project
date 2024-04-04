@@ -1,0 +1,10 @@
+<aura:component access="global" implements = "force:appHostable,flexipage:availableForRecordHome,flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction" >    
+    <aura:attribute type="string" name="personNameVar"  default="srikanth"/>
+    <aura:attribute type="string" name="recordId"/>
+    
+    
+    
+    Hello bossu, I'm Ltng Cmp...!  <br/>
+    Person Name: {!v.personNameVar}<br/>
+    record Id : {!v.recordId}   <br/>
+</aura:component>

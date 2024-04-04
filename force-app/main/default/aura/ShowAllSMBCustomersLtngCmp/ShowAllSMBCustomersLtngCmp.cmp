@@ -1,0 +1,25 @@
+<aura:component implements="force:appHostable" controller="SMBCustomersController">
+    
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <aura:attribute name="toShowTable" type="Boolean" default="False"/>
+	
+    <lightning:button 
+                      variant="success" 
+                      label="SHOW ALL SMB CUSTOMERS DATA" 
+                      title="all customers" 
+                      onclick="{! c.showDATAfunction }"/> <br/>
+    
+    
+    <aura:if isTrue="{!v.toShowTable}">
+        <lightning:datatable data="{! v.mydata }"
+                             columns="{! v.mycolumns }"
+                             keyField="Id"
+                             />
+        
+    </aura:if> 
+    
+    
+    
+    
+</aura:component>

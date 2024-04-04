@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+	
+    
+    <lightning:recordEditForm objectApiName="Contact" 
+                              recordId="{!v.recordId}"
+                              onload="{!c.onLoadFunction}"
+                              onsubmit="{!c.onSubmitFunction}" 
+                              onsuccess="{!c.onSuccessFunction}">
+        <lightning:inputField fieldName="FirstName" />
+        <lightning:inputField fieldName="LastName" />
+        <lightning:inputField fieldName="Phone" />
+        <lightning:inputField fieldName="Email" />
+        <lightning:inputField fieldName="Birthdate"/>
+        
+        <br/>
+        <br/>
+        <lightning:button variant="success" 
+                          label="submit" 
+                          title="submit" 
+                          type="submit"/>
+    </lightning:recordEditForm>
+</aura:component>

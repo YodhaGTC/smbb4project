@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:registerEvent name="yodhaapplicationevent" type="c:yodhaapplicationevent"/>
+	<div>
+        <b>This is an Individual AURA CMP ONE</b> <br/>  
+        <lightning:button variant="success" label="Fire msg using application event" 
+                          title="Success" onclick="{! c.fireEventaction }"/>
+    </div>
+</aura:component>

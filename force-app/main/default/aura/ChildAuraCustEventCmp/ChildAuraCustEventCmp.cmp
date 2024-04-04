@@ -1,0 +1,9 @@
+<aura:component >
+    
+    <aura:registerEvent name="mycmpevent" type="c:mycmpevent"/>
+	<div>
+    	<b>This is child aura cmp: </b>
+        <lightning:button variant="success" label="pass msg to parent ltng cmp" 
+                          title="Success" onclick="{! c.firechildcmpevent }"/>
+    </div>
+</aura:component>

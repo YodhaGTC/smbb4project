@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+    
+    <force:recordEdit recordId="{!v.recordId}" aura:id="formId"/>
+    <br/>
+    <br/>
+    <lightning:button variant="success" 
+                          label="submit" 
+                          title="submit" 
+                          onclick="{! c.saveRecordFunction }"/>
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="parentParam" 
+                    type="STRING" 
+                    default="this is parent param value"/>
+	<div>
+        <b>This is an Parent AURA cmp</b> <br/>
+        <c:ChildAuraCmp childparamreceiver="{!v.parentParam}" 
+                        aura:id="childCmpId"/>
+        <lightning:button variant="success" label="invoke child method" 
+                          title="Success" onclick="{! c.invokeChildmethod }"/>
+    </div>
+</aura:component>

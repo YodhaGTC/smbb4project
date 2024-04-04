@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:handler name="mycmpevent" event="c:mycmpevent" action="{!c.handlecustevent}"/>
+    <aura:attribute name="receiverVar" type="string"/>
+    <div>
+    	<b>This is parent aura cmp: {!v.receiverVar}</b>
+    </div>
+    <c:ChildAuraCustEventCmp />
+</aura:component>

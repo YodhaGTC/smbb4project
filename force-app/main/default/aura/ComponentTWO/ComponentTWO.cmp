@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="receiverParma" type="String"/>
+    <aura:handler event="c:yodhaapplicationevent" action="{!c.handleEvnet}"/>
+	<div>
+        <b>This is an Individual AURA CMP TWO</b> <br/> 
+        <p>The msg received from cmp one: {!v.receiverParma}</p>
+    </div>
+</aura:component>

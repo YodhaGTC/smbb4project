@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" 
+                controller="SampleApexcls">
+    
+    <aura:attribute name="personNameVar"  type="String" default = "Srikanth Bellamkonda"/>
+    <aura:attribute name="address" type = "String" />
+    <aura:attribute name="phone" type = "String" />
+    <aura:attribute name="company" type = "String" />
+    <aura:attribute name="EmpId" type = "String" />
+    <aura:handler name="init" value="{!this}" action="{!c.onload}"/>
+    
+    
+    
+    person Name: {!v.personNameVar} <br/>
+    Person Address : {!v.address} <br/>
+    Person phone : {!v.phone}<br/>
+    Person Company : {!v.company}<br/>
+    Person EmpId : {!v.EmpId}<br/>
+    <lightning:button variant="success" 
+                      label="on request" 
+                      title="on request" 
+                      onclick="{! c.doSomething }"/>
+    <lightning:button variant="success" 
+                      label="GET EMP ID" 
+                      title="GET EMP ID" 
+                      onclick="{! c.getEmpidFunction }"/>
+	
+</aura:component>

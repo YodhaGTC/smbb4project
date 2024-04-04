@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable" controller="SMBcontactcntrl">  
+    
+    <aura:attribute name="con" type="Contact" default="{'sobjectType':'Contact'}"/>    
+    <lightning:card footer="SMB Crompton" title="Contact Insert Section">
+        <p class="slds-p-horizontal_small">
+            <lightning:input name="LastName" label="LastName" value="{!v.con.LastName}" />
+            <lightning:input name="FirstName" label="FirstName" value="{!v.con.FirstName}" />
+            <lightning:input name="Phone" label="Phone" value="{!v.con.Phone}" />
+            <lightning:input name="Email" label="Email" value="{!v.con.Email}" />
+            <lightning:input name="PostalCode" label="Postal code" value="{!v.con.MailingPostalCode}" />
+            <br/>
+            <lightning:button variant="destructive-text" label="Save" title="Save" 
+                              onclick="{! c.saveAction }"/>
+        </p>
+    </lightning:card>
+    
+</aura:component>

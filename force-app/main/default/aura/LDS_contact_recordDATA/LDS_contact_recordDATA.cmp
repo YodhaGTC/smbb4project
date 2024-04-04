@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" 
+                access="global" >
+    
+    <aura:attribute name="record" type="object"/>
+    <aura:attribute name="fieldsRecordObj" type="object"/>
+    <force:recordData 
+                      layoutType="FULL" 
+                      mode="VIEW"
+                      recordId = "{!v.recordId}"
+                      targetRecord = "{!v.record}"
+                      targetFields = "{!v.fieldsRecordObj}">
+    </force:recordData>
+    
+   
+        <lightning:card footer="SMB Contact" title="LDS recordData">
+            <p>First Name: <ui:outputText value="{!v.fieldsRecordObj.FirstName}"/> <br/> </p>
+            <p>Last Name: <ui:outputText value="{!v.fieldsRecordObj.LastName}"/> <br/> </p>
+            <p>Email: <ui:outputText value="{!v.fieldsRecordObj.Email}"/> <br/> </p>
+            <p>Phone: <ui:outputText value="{!v.fieldsRecordObj.Phone}"/> <br/> </p>
+        </lightning:card>
+    
+    
+</aura:component>
